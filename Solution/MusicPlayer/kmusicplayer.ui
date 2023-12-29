@@ -1,0 +1,1056 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>KMusicPlayerClass</class>
+ <widget class="QMainWindow" name="KMusicPlayerClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1300</width>
+    <height>850</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1300</width>
+    <height>850</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1300</width>
+    <height>850</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>KMusicPlayer</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#centralWidget{
+	border-radius: 10px;             /*四角圆角的直径*/
+    border-style:solid;             /*边框样式（实线）*/
+    border-width:2px;             /*边框宽度*/
+    border-color:rgb(213, 213, 213);     /*边框颜色*/
+	background-color:rgb(34,37,42);
+}
+</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QGroupBox" name="groupBox_4">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>40</y>
+      <width>1200</width>
+      <height>800</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>1200</width>
+      <height>800</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>1200</width>
+      <height>800</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QGroupBox{
+	border: 0px solid rgb(0, 0, 0); 
+}</string>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="1" column="1">
+      <widget class="QGroupBox" name="groupBox">
+       <property name="minimumSize">
+        <size>
+         <width>510</width>
+         <height>230</height>
+        </size>
+       </property>
+       <property name="title">
+        <string/>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_5">
+        <item row="0" column="1">
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>45</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="1" column="0">
+         <spacer name="horizontalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>30</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="1" column="1">
+         <widget class="QWidget" name="lyricWidget" native="true">
+          <property name="minimumSize">
+           <size>
+            <width>480</width>
+            <height>200</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QWidget#lyricWidget{
+	background-color: rgb(41,44,51);
+	border-radius:20px;
+    border: 1px solid rgb(0, 0, 0); 
+}</string>
+          </property>
+          <widget class="QWidget" name="layoutWidget">
+           <property name="geometry">
+            <rect>
+             <x>40</x>
+             <y>20</y>
+             <width>402</width>
+             <height>164</height>
+            </rect>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout">
+            <item>
+             <widget class="QLabel" name="lyricPrev">
+              <property name="minimumSize">
+               <size>
+                <width>400</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QLabel#lyricPrev {
+    font-family: &quot;Microsoft YaHei&quot;;
+    font-size: 20px;
+    color: #D1726C;
+}
+</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="verticalSpacer_10">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>18</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QLabel" name="lyricCur">
+              <property name="minimumSize">
+               <size>
+                <width>400</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QLabel#lyricCur {
+    font-family: &quot;Microsoft YaHei&quot;;
+    font-size: 25px;
+    color: rgb(184,215,150);
+}</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="verticalSpacer_11">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>18</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QLabel" name="lyricNext">
+              <property name="minimumSize">
+               <size>
+                <width>400</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QLabel#lyricNext {
+    font-family: &quot;Microsoft YaHei&quot;;
+    font-size: 20px;
+    color: #D1726C;
+}</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <spacer name="horizontalSpacer_4">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>30</width>
+            <height>30</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="2" column="1">
+         <spacer name="verticalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>36</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QGroupBox" name="groupBox_2">
+       <property name="minimumSize">
+        <size>
+         <width>450</width>
+         <height>240</height>
+        </size>
+       </property>
+       <widget class="QSlider" name="audioSliderBar">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>70</y>
+          <width>350</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>350</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QSlider#audioSliderBar::groove:horizontal{ 
+		height: 12px; 
+		left: 0px; 
+		right: 0px; 
+		border:0px; 
+	    border-radius:6px;
+		background:rgba(0,0,0,50);
+} 
+
+QSlider#audioSliderBar::handle:horizontal{ 
+		width:  20px; 
+		height: 20px; 
+		margin-top: -20px; 
+		margin-left: 0px; 
+		margin-bottom: -20px; 
+		margin-right: 0px; 
+ 		image:url(:/images/sliderhandle.png);
+} 
+
+QSlider#audioSliderBar::sub-page:horizontal{
+	   background:rgba(80,166,234,1);
+}
+
+</string>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+       <widget class="QLabel" name="curTimeLabel">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>110</y>
+          <width>60</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel#curTimeLabel {
+    font-family: consolas;
+    font-size: 20px;
+    color: #BDC8E2;
+}</string>
+        </property>
+        <property name="text">
+         <string>--:--</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="totalTimeLabel">
+        <property name="geometry">
+         <rect>
+          <x>430</x>
+          <y>110</y>
+          <width>60</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel#totalTimeLabel {
+    font-family: consolas;
+    font-size: 20px;
+    color: #BDC8E2;
+}</string>
+        </property>
+        <property name="text">
+         <string>--:--</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>140</x>
+          <y>180</y>
+          <width>304</width>
+          <height>72</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <property name="sizeConstraint">
+          <enum>QLayout::SetMinimumSize</enum>
+         </property>
+         <item>
+          <widget class="QPushButton" name="playPrevButton">
+           <property name="minimumSize">
+            <size>
+             <width>70</width>
+             <height>70</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">/* 初始状态 - 启动键 */
+QPushButton#playPrevButton {
+    border: 2px solid #8f8f91;
+    border-radius: 5px;
+    border-image: url(:/images/prev_shadow.png); 
+}
+
+QPushButton#playPrevButton:hover{
+	border: 2px solid #8f8f91;
+    border-radius: 5px;
+    border-image: url(:/images/prev_deep.png); 
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>28</width>
+             <height>17</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="suspendAndResumeButton">
+           <property name="minimumSize">
+            <size>
+             <width>70</width>
+             <height>70</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>70</width>
+             <height>70</height>
+            </size>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>28</width>
+             <height>17</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="playNextButton">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>70</width>
+             <height>70</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">/* 初始状态 - 启动键 */
+QPushButton#playNextButton {
+    border: 2px solid #8f8f91;
+    border-radius: 5px;
+    border-image: url(:/images/next_shadow.png); 
+}
+
+QPushButton#playNextButton:hover {
+    border: 2px solid #8f8f91;
+    border-radius: 5px;
+    border-image: url(:/images/next_deep.png); 
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QLabel" name="musicTitle">
+        <property name="geometry">
+         <rect>
+          <x>210</x>
+          <y>110</y>
+          <width>161</width>
+          <height>18</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel#musicTitle {
+    font-family: consolas;
+    font-size: 20px;
+    color: #BDC8E2;
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QGroupBox" name="diskIconGroupBox">
+       <property name="minimumSize">
+        <size>
+         <width>450</width>
+         <height>360</height>
+        </size>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="0" column="1">
+         <spacer name="verticalSpacer_7">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>37</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="3">
+         <spacer name="verticalSpacer_8">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>37</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="1" column="0">
+         <spacer name="horizontalSpacer_15">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>37</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="1" column="1">
+         <widget class="QGroupBox" name="groupBox_5">
+          <property name="minimumSize">
+           <size>
+            <width>370</width>
+            <height>280</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QGroupBox#groupBox_5{
+	border: 0px solid rgb(0, 0, 0); 
+}</string>
+          </property>
+          <property name="title">
+           <string/>
+          </property>
+          <widget class="QLabel" name="diskImg">
+           <property name="geometry">
+            <rect>
+             <x>100</x>
+             <y>40</y>
+             <width>200</width>
+             <height>200</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap resource="kmusicplayer.qrc">:/images/disk.png</pixmap>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QLabel" name="albumImg">
+           <property name="geometry">
+            <rect>
+             <x>135</x>
+             <y>75</y>
+             <width>130</width>
+             <height>130</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+          <widget class="QLabel" name="diskNeedle">
+           <property name="geometry">
+            <rect>
+             <x>40</x>
+             <y>203</y>
+             <width>171</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap resource="kmusicplayer.qrc">:/images/magnetNeedle.png</pixmap>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <spacer name="horizontalSpacer_13">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>46</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="1" column="3" rowspan="2">
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <property name="sizeConstraint">
+           <enum>QLayout::SetMinimumSize</enum>
+          </property>
+          <item>
+           <widget class="QSlider" name="volumeSlider">
+            <property name="minimumSize">
+             <size>
+              <width>30</width>
+              <height>160</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QSlider#volumeSlider::add-page:vertical {
+	background-color: rgb(209,114,108);
+	width:5px;
+	border-radius: 2px;
+}
+ 
+QSlider#volumeSlider::sub-page:vertical 
+{
+	background-color: #7A7B79;
+	width:5px;
+	border-radius: 2px;
+}
+ 
+QSlider#volumeSlider::groove:vertical 
+{
+	background:transparent;
+	width:6px;
+}
+ 
+QSlider#volumeSlider::handle:vertical    
+{
+	height: 14px;  
+	width: 14px;
+	margin: 0px -4px 0px -4px;
+	border-radius: 7px;
+	image:url(:/images/sliderhandlevol.png);
+}
+</string>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="volumeIcon">
+            <property name="minimumSize">
+             <size>
+              <width>30</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton#volumeIcon{
+	border-image: url(:/images/volumepur.png); 
+}</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="playMode">
+            <property name="minimumSize">
+             <size>
+              <width>35</width>
+              <height>35</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="4">
+         <spacer name="horizontalSpacer_14">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>37</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="2" column="1" rowspan="2">
+         <spacer name="verticalSpacer_6">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>36</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="3" column="3">
+         <spacer name="verticalSpacer_9">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>25</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+       <zorder>groupBox_5</zorder>
+       <zorder>horizontalSpacer_13</zorder>
+       <zorder>horizontalSpacer_14</zorder>
+       <zorder>horizontalSpacer_15</zorder>
+       <zorder>verticalSpacer_6</zorder>
+       <zorder>verticalSpacer_7</zorder>
+       <zorder>verticalSpacer_8</zorder>
+       <zorder>verticalSpacer_9</zorder>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QGroupBox" name="groupBox_3">
+       <property name="minimumSize">
+        <size>
+         <width>530</width>
+         <height>380</height>
+        </size>
+       </property>
+       <widget class="QListWidget" name="remoteMusicList">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>50</y>
+          <width>500</width>
+          <height>320</height>
+         </rect>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>500</width>
+          <height>320</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QListWidget#remoteMusicList{
+	background-color: rgb(41,44,51);
+	border: 1px solid rgb(0, 0, 0); 
+}</string>
+        </property>
+       </widget>
+       <widget class="QListWidget" name="localMusicList">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>50</y>
+          <width>500</width>
+          <height>320</height>
+         </rect>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>500</width>
+          <height>320</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QListWidget#localMusicList{
+	background-color: rgb(41,44,51);
+	border: 1px solid rgb(0, 0, 0); 
+}</string>
+        </property>
+       </widget>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>10</y>
+          <width>231</width>
+          <height>42</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <property name="sizeConstraint">
+          <enum>QLayout::SetMinimumSize</enum>
+         </property>
+         <item>
+          <widget class="QPushButton" name="localMusicBtn">
+           <property name="minimumSize">
+            <size>
+             <width>110</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">/* 设置 QPushButton 的基本样式 */
+QPushButton#localMusicBtn {
+    background-color: rgb(209,114,108); /* 设置按钮的默认背景颜色 */
+    border: 1px solid rgb(209,114,108); /* 设置按钮的默认边框颜色和宽度 */
+    color: white; /* 设置按钮的文本颜色 */
+    border-top-left-radius: 10px; /* 设置左上角为圆角 */
+    border-top-right-radius: 10px; /* 设置右上角为圆角 */
+	font-family: consolas;
+	font-size:23px
+}
+
+/* 鼠标悬停效果 */
+QPushButton#localMusicBtn:hover {
+    background-color: rgb(239,114,108); /* 设置鼠标悬停时的背景颜色 */
+}</string>
+           </property>
+           <property name="text">
+            <string>Local</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="remoteMusicBtn">
+           <property name="minimumSize">
+            <size>
+             <width>110</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">/* 设置 QPushButton 的基本样式 */
+QPushButton#remoteMusicBtn {
+    background-color: rgb(116,173,233); /* 设置按钮的默认背景颜色 */
+    border: 1px solid rgb(116,173,233); /* 设置按钮的默认边框颜色和宽度 */
+    color: white; /* 设置按钮的文本颜色 */
+    border-top-left-radius: 10px; /* 设置左上角为圆角 */
+    border-top-right-radius: 10px; /* 设置右上角为圆角 */
+	font-family: consolas;
+	font-size:23px
+}
+
+/* 鼠标悬停效果 */
+QPushButton#remoteMusicBtn:hover {
+    background-color: rgb(116,193,233); /* 设置鼠标悬停时的背景颜色 */
+}</string>
+           </property>
+           <property name="text">
+            <string>Remote</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QPushButton" name="openFileBtn">
+        <property name="geometry">
+         <rect>
+          <x>436</x>
+          <y>10</y>
+          <width>114</width>
+          <height>40</height>
+         </rect>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>110</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">/* 设置 QPushButton 的基本样式 */
+QPushButton#openFileBtn {
+    background-color: #BB7CD7; /* 设置按钮的默认背景颜色 */
+    border: 1px solid #BB7CD7; /* 设置按钮的默认边框颜色和宽度 */
+    color: white; /* 设置按钮的文本颜色 */
+    border-top-left-radius: 10px; /* 设置左上角为圆角 */
+    border-top-right-radius: 10px; /* 设置右上角为圆角 */
+	font-family: consolas;
+	font-size:23px
+}
+
+/* 鼠标悬停效果 */
+QPushButton#openFileBtn:hover {
+    background-color: #CB7CD7; /* 设置鼠标悬停时的背景颜色 */
+}</string>
+        </property>
+        <property name="text">
+         <string>open</string>
+        </property>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="topWidget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1301</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <widget class="QPushButton" name="closeBtn">
+     <property name="geometry">
+      <rect>
+       <x>1255</x>
+       <y>5</y>
+       <width>41</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton#closeBtn{
+	border-image: url(:/images/close.png);
+}
+
+QPushButton#closeBtn:hover{
+	background-color:#3E4249
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="iconImg">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>5</y>
+       <width>35</width>
+       <height>35</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel#iconImg{
+	border-image: url(:/images/icon.png);
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="titleLabel">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>5</y>
+       <width>171</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel#titleLabel{
+	font-family: consolas;
+	font-size:25px;
+	color: white;
+}</string>
+     </property>
+     <property name="text">
+      <string>MusicPlayer</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="kmusicplayer.qrc"/>
+ </resources>
+ <connections/>
+</ui>

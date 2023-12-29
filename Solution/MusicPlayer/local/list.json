@@ -1,0 +1,39 @@
+{
+    "list" : [
+        {
+            "path": "/风雨无阻-半吨兄弟",
+            "musicName": "风雨无阻",
+            "singer": "半吨兄弟",
+            "albumName": "风雨无阻",
+            "duration": 253
+        },
+        {
+            "path": "/风雨无阻-周华健",
+            "musicName": "风雨无阻",
+            "singer": "周华健",
+            "albumName": "风雨无阻",
+            "duration": 256
+        },
+        {
+            "path": "/孤勇者-陈奕迅",
+            "musicName": "孤勇者",
+            "singer": "陈奕迅",
+            "albumName": "孤勇者",
+            "duration": 255
+        },
+        {
+            "path": "/起风了-周深",
+            "musicName": "起风了",
+            "singer": "周深",
+            "albumName": "起风了",
+            "duration": 255
+        },
+        {
+            "path": "/成都-赵雷",
+            "musicName": "成都",
+            "singer": "赵雷",
+            "albumName": "无法长大",
+            "duration": 255
+        }
+    ]
+}

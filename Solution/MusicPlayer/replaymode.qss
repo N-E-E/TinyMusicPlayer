@@ -1,0 +1,3 @@
+QPushButton#playMode{
+	border-image: url(:/images/replaymode.png); 
+}

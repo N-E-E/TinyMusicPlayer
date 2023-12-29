@@ -1,0 +1,12 @@
+/* ³õÊ¼×´Ì¬ - Æô¶¯¼ü */
+QPushButton#suspendAndResumeButton {
+    border: 2px solid #8f8f91;
+    border-radius: 5px;
+    border-image: url(:/images/pause_shadow.png); 
+}
+
+QPushButton#suspendAndResumeButton:hover {
+    border: 2px solid #8f8f91;
+    border-radius: 5px;
+    border-image: url(:/images/pause_deep.png); 
+}

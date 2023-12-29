@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>qml;cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>qrc;rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Translation Files">
+      <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
+      <Extensions>ts</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="kmusicplayer.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtUic Include="kmusicplayer.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtMoc Include="kmusicplayer.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClCompile Include="kmusicplayer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="kmusicmodule.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="kglobalinfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="klocalmusicmanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="kmusiclistitem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="klyricmodule.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="khttpdownloader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="kremotedatamanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="kaudiodecoder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="kaudiodecoder.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="kmusicmodule.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="klocalmusicmanager.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="kmusiclistitem.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="klyricmodule.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="khttpdownloader.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="kremotedatamanager.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="kaudiodecodercore.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="kglobalinfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="suspendbtn.qss">
+      <Filter>Form Files</Filter>
+    </None>
+    <None Include="playbtn.qss">
+      <Filter>Form Files</Filter>
+    </None>
+    <None Include="volumesilence.qss">
+      <Filter>Form Files</Filter>
+    </None>
+    <None Include="volumenormal.qss">
+      <Filter>Form Files</Filter>
+    </None>
+    <None Include="randommode.qss">
+      <Filter>Form Files</Filter>
+    </None>
+    <None Include="replaymode.qss">
+      <Filter>Form Files</Filter>
+    </None>
+    <None Include="sequencemode.qss">
+      <Filter>Form Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="kmusiclistitem.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+  </ItemGroup>
+</Project>

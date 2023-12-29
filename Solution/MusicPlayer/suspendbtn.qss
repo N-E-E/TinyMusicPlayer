@@ -1,0 +1,12 @@
+
+QPushButton#suspendAndResumeButton {
+    border: 2px solid #8f8f91;
+    border-radius: 5px;
+    border-image: url(:/images/play_shadow.png); 
+}
+
+QPushButton#suspendAndResumeButton:hover {
+    border: 2px solid #8f8f91;
+    border-radius: 5px;
+    border-image: url(:/images/play_deep.png); 
+}

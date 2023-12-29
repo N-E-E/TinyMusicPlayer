@@ -1,0 +1,3 @@
+QPushButton#volumeIcon{
+	border-image: url(:/images/novolumepur.png); 
+}
